@@ -1,0 +1,40 @@
+.logo {
+    height: 50px;
+    width: 50px;
+    transform: translate(-12px, -12px);
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sub-title {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+label {
+    font-size: 12px;
+}
+
+mat-icon {
+    font-size: 14px;
+    width: 14px;
+    height: auto;
+    transform: translate(0px, 3px);
+    margin-right: 4px;
+    cursor: pointer;
+    color: gray;
+}
+
+input {
+    border: none;
+    background-color: #f9f9f9;
+}
+
+label::after {
+    content: " Required";
+    color: gray;
+    margin-left: 4px;
+}

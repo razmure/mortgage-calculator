@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    height: 100%;
+}
+
+.next {
+    background-color: #194dfa;
+    color: #f1f6ff;
+    font-weight: 200;
+    border-radius: 50px;
+    border: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+}
+
+
+.back {
+    background-color: #f1f6ff;
+    color: #194dfa;
+    font-weight: 200;
+    border-radius: 50px;
+    border: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-container {
+    overflow-y: auto;
+    scrollbar-width: 0;
+}
