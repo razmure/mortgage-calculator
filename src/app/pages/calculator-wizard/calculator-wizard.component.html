@@ -1,15 +1,27 @@
-<div class="wrapper">
-  <div class="row gx-1 flex-grow-1 form-container">
+<stepper [nbOfSteps]="7" [stepNumber]="3">
+  <div class="row gx-0 flex-grow-1 form-container">
     <div class="col-md-7 d-flex align-items-center">
-      <mortgage-form class="flex-grow-1"></mortgage-form>
+      <mortgage-form
+        class="flex-grow-1"
+        (valueChange)="calculateMortgage($event)"
+      ></mortgage-form>
     </div>
-    <div class="col-md-5 d-flex align-items-center">
-      <mortgage-calculation class="flex-grow-1"></mortgage-calculation>
+    <div class="col-md-5 d-flex align-items-center mb-3">
+      <mortgage-calculation
+        [showPlaceholders]="showPlaceholders"
+        [monthlyPayment]="monthlyPayment"
+        [term]="data?.prefferedRepaymentPeriod"
+        [purchasePrice]="data?.purchasePrice"
+        [grossHouseholdIncome]="data?.grossHouseholdIncome"
+        [borrowingAmount]="data?.borrowingAmount"
+        class="flex-grow-1"
+      ></mortgage-calculation>
     </div>
     <div class="buttons">
-        <button class="back ms-3 mb-3">Go Back</button>
-        <button class="next ms-3 mb-3">Next Step</button>
+      <div class="d-grid d-md-flex">
+        <button class="back ms-4 mb-3 me-4 me-md-0">Go Back</button>
+        <button class="next ms-4 mb-3 me-4">Next Step</button>
+      </div>
     </div>
   </div>
-  <stepper></stepper>
-</div>
+</stepper>

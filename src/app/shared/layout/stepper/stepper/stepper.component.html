@@ -1,0 +1,11 @@
+<div class="d-md-flex h-100">
+  <ng-content></ng-content>
+  <div class="stepper d-flex">
+    <div class="m-auto d-flex d-md-block">
+      <mat-icon class="close-btn" (click)="closeClicked.emit()">close</mat-icon>
+      @for (step of steps(); track step) {
+      <div class="step" [ngClass]="{ selected: step === stepNumber() }"></div>
+      }
+    </div>
+  </div>
+</div>

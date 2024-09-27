@@ -1,10 +1,41 @@
-<card>
-    <mat-icon>
-        calculate
-    </mat-icon>
-    <p class="title">Your Mortgage Calculation</p>
-    <div class="mt-4 monthly-payment">
-        <span class="monthly-payment-amount">{{ monthlyPayment | currency:'EUR':true:'1.0-0' }}</span> Per Month
+<card [noPadding]="true">
+  <mat-icon> calculate </mat-icon>
+  <p class="title">Your Mortgage Calculation</p>
+  <div class="mt-4 monthly-payment">
+    <span
+      class="monthly-payment-amount"
+      [ngClass]="{ 'blur-black-text': showPlaceholders() }"
+      >{{
+        (showPlaceholders() ? 4550 : monthlyPayment())
+          | currency : "EUR" : true : "1.0-0"
+      }}</span
+    >
+    Per Month
+  </div>
+  <div class="mortgage-info">
+    <div class="card">
+      <div class="head" [ngClass]="{ 'blur-blue-text': showPlaceholders() }">
+        {{ showPlaceholders() ? 4.5 : (debtToIncome() | number : "1.1-2") }}x
+      </div>
+      <div>Debt To Income</div>
     </div>
+    <div class="card">
+      <div class="head" [ngClass]="{ 'blur-blue-text': showPlaceholders() }">
+        {{ showPlaceholders() ? 80.5 : (loanToValue() | number : "1.1-2") }}%
+      </div>
+      <div>Loan To Value</div>
+    </div>
+    <div class="card">
+      <div class="head" [ngClass]="{ 'blur-blue-text': showPlaceholders() }">
+        {{ showPlaceholders() ? 30 : term() }}
+      </div>
+      <div>Term (Years)</div>
+    </div>
+  </div>
+  <div class="description">
+    Here’s our estimate of your monthly mortgage repayments. In general, the
+    maximum amount you can borrow is <b>4.5x</b> your joint income and you need
+    to have at least <b>10%</b> of the value of the property saved as a deposit
+    for lenders to accept your application.
+  </div>
 </card>
-  

@@ -1,5 +1,5 @@
 mat-icon {
-    font-size: 24px
+    font-size: 24px;
 }
 
 .title {
@@ -14,4 +14,54 @@ mat-icon {
 
 .monthly-payment {
     font-size: 14px;
+}
+
+.blur-blue-text {
+    color: transparent;
+    text-shadow: 0px 0px 10px #194dfa85;
+}
+
+.blur-black-text {
+    color: transparent;
+    text-shadow: 0px 0px 10px #00000085;
+}
+
+.mortgage-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.card {
+    width: -webkit-fill-available;
+    padding: 12px;
+    padding-bottom: 0;
+    border: none;
+    background-color: #f3f7ff;
+    color: #194dfa;
+    div {
+        text-align: center;
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 16px;
+    }
+
+    .head {
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27.2px;
+    text-align: left;
+    color: #556062;
+    b {
+        font-weight: 500;
+        color: #000000;
+    }
 }

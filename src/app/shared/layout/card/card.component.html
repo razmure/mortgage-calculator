@@ -1,3 +1,5 @@
-<mat-card>
-  <mat-card-content class="m-3"><ng-content></ng-content></mat-card-content>
+<mat-card class="m-4">
+  <mat-card-content [ngClass]="{ 'm-3': !noPadding() }"
+    ><ng-content></ng-content
+  ></mat-card-content>
 </mat-card>
