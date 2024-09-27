@@ -17,6 +17,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { MortgageData } from '../../../../core/models/mortgage-data';
 import { NgClass } from '@angular/common';
 import { SelectDropdownComponent } from '../../../../shared/inputs/select-dropdown/select-dropdown.component';
+import { MatTooltip } from '@angular/material/tooltip';
 
 @Component({
   selector: 'mortgage-form',
@@ -27,6 +28,7 @@ import { SelectDropdownComponent } from '../../../../shared/inputs/select-dropdo
     ReactiveFormsModule,
     NgClass,
     SelectDropdownComponent,
+    MatTooltip
   ],
   templateUrl: './mortgage-form.component.html',
   styleUrl: './mortgage-form.component.scss',
