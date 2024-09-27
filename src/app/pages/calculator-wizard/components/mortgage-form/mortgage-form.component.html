@@ -12,10 +12,11 @@
           >
           Borrowing Amount
         </label>
+        <span>&#8364;</span>
         <input
           type="number"
           formControlName="borrowingAmount"
-          class="col-md-6 form-control"
+          class="col-md-6 form-control currency"
           [ngClass]="{
             'is-invalid': form.controls.borrowingAmount.errors?.['required']
             && form.controls.borrowingAmount.touched
@@ -30,10 +31,11 @@
           >
           Purchase Price
         </label>
+        <span>&#8364;</span>
         <input
           type="number"
           formControlName="purchasePrice"
-          class="col-md-6 form-control"
+          class="col-md-6 form-control currency"
           [ngClass]="{
             'is-invalid': form.controls.purchasePrice.errors?.['required']
             && form.controls.purchasePrice.touched
@@ -61,10 +63,11 @@
           >
           Gross Household Income
         </label>
+        <span>&#8364;</span>
         <input
           type="number"
           formControlName="grossHouseholdIncome"
-          class="col-md-6 form-control"
+          class="col-md-6 form-control currency"
           [ngClass]="{
             'is-invalid': 
               form.controls.grossHouseholdIncome.errors?.['required'] && 

@@ -33,6 +33,10 @@ input {
     background-color: #f9f9f9;
 }
 
+input.currency {
+    padding-left: 24px;
+}
+
 label::after {
     content: " Required";
     color: gray;
@@ -50,4 +54,13 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
     appearance: textfield;
+}
+
+.form-group {
+    position: relative;
+    span {
+        position: absolute;
+        left: 20px;
+        top: 32px;
+    }
 }
