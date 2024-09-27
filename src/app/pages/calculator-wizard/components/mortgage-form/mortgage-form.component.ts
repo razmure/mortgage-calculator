@@ -37,7 +37,7 @@ export class MortgageFormComponent implements OnInit, OnDestroy {
   @Output()
   public valueChange = new EventEmitter<MortgageData | undefined>();
 
-  private unsubscribe$ = new Subject();
+  private unsubscribe$ = new Subject<void>();
 
   public form = new FormGroup({
     borrowingAmount: new FormControl<number | null>(null, [
@@ -66,7 +66,7 @@ export class MortgageFormComponent implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    this.unsubscribe$.next(null);
+    this.unsubscribe$.next();
     this.unsubscribe$.complete();
   }
 }

@@ -2,7 +2,6 @@ import { Component, computed, input } from '@angular/core';
 import { CardComponent } from '../../../../shared/layout/card/card.component';
 import { MatIcon } from '@angular/material/icon';
 import { CurrencyPipe, DecimalPipe, NgClass } from '@angular/common';
-import { MortgageCalculations } from '../../../../core/models/mortgage-calculations';
 
 @Component({
   selector: 'mortgage-calculation',
@@ -19,7 +18,7 @@ export class MortgageCalculationComponent {
   public borrowingAmount = input<number>();
   public showPlaceholders = input<boolean>(true);
 
-  debtToIncome = computed<number>(() => {
+  public debtToIncome = computed<number>(() => {
     const borrowingAmount = this.borrowingAmount();
     const grossHouseholdIncome = this.grossHouseholdIncome();
     if (borrowingAmount && grossHouseholdIncome) {
@@ -28,7 +27,7 @@ export class MortgageCalculationComponent {
     return 0;
   });
 
-  loanToValue = computed<number>(() => {
+  public loanToValue = computed<number>(() => {
     const borrowingAmount = this.borrowingAmount();
     const purchasePrice = this.purchasePrice();
     if (borrowingAmount && purchasePrice) {

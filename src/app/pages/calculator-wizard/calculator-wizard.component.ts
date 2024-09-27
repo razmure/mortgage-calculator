@@ -4,7 +4,6 @@ import { MortgageFormComponent } from './components/mortgage-form/mortgage-form.
 import { StepperComponent } from '../../shared/layout/stepper/stepper/stepper.component';
 import { MortgageData } from '../../core/models/mortgage-data';
 import { MortgageService } from '../../core/services/mortgage.service';
-import { MortgageCalculations } from '../../core/models/mortgage-calculations';
 
 @Component({
   standalone: true,
