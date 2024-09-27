@@ -18,6 +18,7 @@ import { MortgageData } from '../../../../core/models/mortgage-data';
 import { NgClass } from '@angular/common';
 import { SelectDropdownComponent } from '../../../../shared/inputs/select-dropdown/select-dropdown.component';
 import { MatTooltip } from '@angular/material/tooltip';
+import { PositiveValueDirective } from '../../../../core/directives/positive-value.directive';
 
 @Component({
   selector: 'mortgage-form',
@@ -28,7 +29,8 @@ import { MatTooltip } from '@angular/material/tooltip';
     ReactiveFormsModule,
     NgClass,
     SelectDropdownComponent,
-    MatTooltip
+    MatTooltip,
+    PositiveValueDirective,
   ],
   templateUrl: './mortgage-form.component.html',
   styleUrl: './mortgage-form.component.scss',

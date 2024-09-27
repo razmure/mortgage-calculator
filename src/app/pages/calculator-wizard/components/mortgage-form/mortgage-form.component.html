@@ -15,6 +15,7 @@
         <span>&#8364;</span>
         <input
           type="number"
+          positive-value
           formControlName="borrowingAmount"
           class="col-md-6 form-control currency"
           [ngClass]="{
@@ -35,6 +36,7 @@
         <input
           type="number"
           formControlName="purchasePrice"
+          positive-value
           class="col-md-6 form-control currency"
           [ngClass]="{
             'is-invalid': form.controls.purchasePrice.errors?.['required']
@@ -67,6 +69,7 @@
         <input
           type="number"
           formControlName="grossHouseholdIncome"
+          positive-value
           class="col-md-6 form-control currency"
           [ngClass]="{
             'is-invalid': 
@@ -88,6 +91,7 @@
         <input
           type="number"
           formControlName="interestRate"
+          positive-value
           class="col-md-6 form-control"
           [ngClass]="{
             'is-invalid': form.controls.interestRate.errors?.['required']
